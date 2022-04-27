@@ -123,7 +123,7 @@ def display_quiz(questions):
         name = input("\nPlease enter your name below:\n\n")
         if name.isalpha():
             break
-    print("The quiz requires characters from A-Z only:\n")
+    print("\nThe quiz requires characters from A-Z only:\n")
     print(f"\n Let us now start the Python Quiz, {name}\n\n")
     time.sleep(2)
     new_list = random.sample(questions, 10)
@@ -145,8 +145,9 @@ def display_quiz(questions):
     endgame_image()
     time.sleep(1)
     print("Press R to replay the quiz\n")
-    print("Press Q to quit the quiz and return to start menu\n\n\n\n\n")
-    print()
+    print("Press Q to quit the quiz and return to start menu\n")
+    print("---------------------------------------------------")
+    print("---------------------------------------------------")
     time.sleep(2)
     gameover_menu()
 
@@ -181,9 +182,10 @@ def nav_menu():
 
     if press_key == "q":
         time.sleep(2)
-        print("Have a nice day! Please come back and play again some time!\n")
-        time.sleep(2)
-        start_game()
+        print("\nHave a nice day! "
+              "Please come back and play again some time!\n")
+        print("Press the Run Command Button above to start again.\n")
+        print("---------------------------------------------------")
 
     else:
         print("Invalid choice. Please press either P or Q.\n")
@@ -199,13 +201,14 @@ def gameover_menu():
     press_key = input().lower()
     if press_key == "r":
         time.sleep(2)
-        print("....starting the quiz...\n\n")
+        print("....re-starting the quiz...\n\n")
         time.sleep(2)
         quiz_instructions()
         display_quiz(questions)
     if press_key == "q":
         time.sleep(2)
         print()
+        start_image()
         time.sleep(2)
         display_menu()
     else:
@@ -222,16 +225,16 @@ def display_menu():
     """
     print("Please Enter A to start the quiz.\n")
     print("Please Enter B to go to Instructions.\n\n")
+    print("---------------------------------------------------")
     menu = (input("A: Start Quiz    B: Instructions\n").lower())
     if menu == "a":
         time.sleep(1)
         display_quiz(questions)
     if menu == "b":
-        print("Please check out the Quiz instructions...\n")
+        print("\nPlease check out the Quiz instructions...\n")
         time.sleep(3)
         quiz_instructions()
-        print("Press P to proceed to the Quiz\n")
-        print("Press Q to quit")
+        print("Press P to proceed to the Quiz or press Q to quit\n")
         nav_menu()
     if menu not in ['a', 'b']:
         print('Invalid choice! Please choose A or B to proceed\n\n')
