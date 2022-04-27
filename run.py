@@ -145,9 +145,9 @@ def display_quiz(questions):
     time.sleep(1)
     print("Press R to replay the quiz\n")
     print("Press Q to quit the quiz and return to start menu")
-    print("Alternatively, click the RUN PROGRAM button to Quit the quiz\n")
+    print()
     time.sleep(2)
-    # gameover_menu()
+    gameover_menu()
 
 
 def quiz_instructions():
@@ -188,6 +188,30 @@ def nav_menu():
         print("Invalid choice. Please press either P or Q.\n")
         time.sleep(1)
         nav_menu()
+
+
+def gameover_menu():
+    """
+    This is a function to display a menu.
+    The menu gives options to replay or quit the quiz.
+    """
+    press_key = input().lower()
+    if press_key == "r":
+        time.sleep(2)
+        print("....starting the quiz...\n\n")
+        time.sleep(2)
+        quiz_instructions()
+        display_quiz(questions)
+    if press_key == "q":
+        time.sleep(2)
+        print()
+        time.sleep(2)
+        display_menu()
+    else:
+        print("Invalid input!")
+        time.sleep(1)
+        print("Press either R, Q")
+        gameover_menu()
 
 
 def display_menu():
