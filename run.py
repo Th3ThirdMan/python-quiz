@@ -175,7 +175,7 @@ def nav_menu():
     press_key = input().lower()
     if press_key == "p":
         time.sleep(2)
-        print("Nice to see you back and ready to play!\n")
+        print("Nice to see you're ready to play!\n")
         time.sleep(2)
         display_quiz(questions)
 
