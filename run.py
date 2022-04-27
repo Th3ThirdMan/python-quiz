@@ -4,8 +4,17 @@
 # Module needed to enact random question data for the quiz.
 """
 import time
-#import random
+# import random
 import pyfiglet
+
+
+class Question:
+    """
+    This class creates a method to initialize question objects.
+    """
+    def __init__(self, query, answer):
+        self.query = query
+        self.answer = answer
 
 
 questions_quiz = [
@@ -70,6 +79,22 @@ questions_quiz = [
     "B: Italian\n"
     "C: Spanish\n"
     "D: French\n"
+]
+
+
+questions = [
+    Question(questions_quiz[0], "a"),
+    Question(questions_quiz[1], "b"),
+    Question(questions_quiz[2], "c"),
+    Question(questions_quiz[3], "d"),
+    Question(questions_quiz[4], "a"),
+    Question(questions_quiz[5], "b"),
+    Question(questions_quiz[6], "c"),
+    Question(questions_quiz[7], "d"),
+    Question(questions_quiz[8], "a"),
+    Question(questions_quiz[9], "b"),
+    Question(questions_quiz[10], "c"),
+    Question(questions_quiz[11], "d"),
 ]
 
 
