@@ -123,7 +123,7 @@ def display_quiz(questions):
         name = input("\nPlease enter your name below:\n\n")
         if name.isalpha():
             break
-    print("\nThe quiz requires characters from A-Z only:\n")
+    print("\nThe quiz requires characters from A-Z only\n")
     print(f"\n Let us now start the Python Quiz, {name}\n\n")
     time.sleep(2)
     new_list = random.sample(questions, 10)
@@ -186,7 +186,6 @@ def nav_menu():
               "Please come back and play again some time!\n")
         print("Press the Run Command Button above to start again.\n")
         print("---------------------------------------------------")
-
     else:
         print("Invalid choice. Please press either P or Q.\n")
         time.sleep(1)
@@ -201,7 +200,7 @@ def gameover_menu():
     press_key = input().lower()
     if press_key == "r":
         time.sleep(2)
-        print("....re-starting the quiz...\n\n")
+        print("\n\n\n....re-starting the quiz...\n\n")
         time.sleep(2)
         quiz_instructions()
         display_quiz(questions)
@@ -212,9 +211,9 @@ def gameover_menu():
         time.sleep(2)
         display_menu()
     else:
-        print("Invalid input!")
+        print("Invalid input!\n")
         time.sleep(1)
-        print("Press either R or Q")
+        print("Press either R or Q\n")
         gameover_menu()
 
 
