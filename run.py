@@ -12,6 +12,7 @@ class Question:
     """
     This class creates a method to initialize question objects.
     """
+
     def __init__(self, query, answer):
         self.query = query
         self.answer = answer
