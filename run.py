@@ -98,6 +98,45 @@ questions = [
 ]
 
 
+def quiz_instructions():
+    """
+    Function to display quiz instructions to the user.
+    """
+    print("These are the instructions to the Python Quiz!\n\n")
+    time.sleep(2)
+    print("1. The quiz contains questions relating to Python.")
+    print("2. The quiz contains 10 questions.")
+    print("3. It is a multiple choice quiz, so you can choose "
+          "answers from A to D")
+    print("4. Your score will be revealed at the end of the quiz.\n\n")
+
+    time.sleep(2)
+    print("It's now time to start the quiz!\n\n")
+
+
+def display_menu():
+    """
+    This is a function to display a menu to start the quiz.
+    This is a function to read through the instructions.
+    """
+    print("Please Enter A to start the quiz.\n")
+    print("Please Enter B to go to Instructions.\n\n")
+    menu = (input("A: Start Quiz    B: Instructions\n").lower())
+    if menu == "a":
+        time.sleep(1)
+        # display_quiz(questions)
+    if menu == "b":
+        print("Please check out the Quiz instructions")
+        time.sleep(3)
+        quiz_instructions()
+        print("Press P to proceed to the Quiz\n")
+        print("Press Q to quit")
+        # nav_menu()
+    if menu not in ['a', 'b']:
+        print('Invalid choice! Please choose A or B to proceed\n\n')
+        return display_menu()
+
+
 def start_image():
     """
     This is a function that enacts an ASCII output.
@@ -116,6 +155,8 @@ def start_game():
     Function to start the Python Quiz game.
     """
     time.sleep(2)
+
+    display_menu()
 
 
 start_game()
