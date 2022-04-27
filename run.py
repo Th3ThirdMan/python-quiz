@@ -23,7 +23,7 @@ questions_quiz = [
     "A: Guido van Rossum\n"
     "B: Brendan Eich\n"
     "C: Bill Gates\n"
-    "D: Tim Berners-Lee",
+    "D: Tim Berners-Lee\n",
     "In what year was Python released?\n\n"
     "A: 1990\n"
     "B: 1991\n"
@@ -44,7 +44,7 @@ questions_quiz = [
     "B: let\n"
     "C: var\n"
     "D: const\n",
-    "What is short Else If in Python?\n\n"
+    "What is short for 'Else If' in Python?\n\n"
     "A: if\n"
     "B: elif\n"
     "C: else\n"
@@ -175,7 +175,7 @@ def nav_menu():
     press_key = input().lower()
     if press_key == "p":
         time.sleep(2)
-        print("Nice to see you're ready to play!\n")
+        print("\nNice to see you're ready to play!\n")
         time.sleep(2)
         display_quiz(questions)
 
@@ -227,7 +227,7 @@ def display_menu():
         time.sleep(1)
         display_quiz(questions)
     if menu == "b":
-        print("Please check out the Quiz instructions")
+        print("Please check out the Quiz instructions...\n")
         time.sleep(3)
         quiz_instructions()
         print("Press P to proceed to the Quiz\n")
@@ -258,7 +258,7 @@ def endgame_image():
     image = pyfiglet.figlet_format("This is the end of the Quiz: "
                                    "Thanks for playing!")
     print(image)
-    time.sleep(1.5)
+    time.sleep(2.5)
 
 
 def start_game():
