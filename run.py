@@ -4,7 +4,7 @@
 # Module needed to enact random question data for the quiz.
 """
 import time
-# import random
+import random
 import pyfiglet
 
 
@@ -98,6 +98,58 @@ questions = [
 ]
 
 
+def user_choice():
+    """
+    Function to accept user choice of answers.
+    """
+    options = input("Please choose an option:- (A, B, C, or D)\n")
+    selection = options.lower()
+    selection = options.strip()
+    if selection not in ['a', 'b', 'c', 'd']:
+        print('This is not a valid selection.\n\n')
+        return user_choice()
+
+    return selection
+
+
+def display_quiz(questions):
+    """
+    This function is designed to get input of a user's name.
+    This function is designed to display questions.
+    This function checks if answers are correct or incorrect.
+    """
+    while True:
+        name = input("\nPlease enter your name below:\n\n")
+        if name.isalpha():
+            break
+    print("The quiz requires characters from A-Z only:\n")
+    print(f"\n Let us now start the Python Quiz, {name}\n\n")
+    time.sleep(2)
+    new_list = random.sample(questions, 10)
+    score = 0
+    for sample in new_list:
+        print(sample.query)
+        if user_choice() == sample.answer:
+            score += 1
+            print("\nThat is correct\n\n")
+            time.sleep(1.5)
+        else:
+            print("\nThat is incorrect\n\n")
+            time.sleep(1.5)
+    print("Thank you for completing the quiz, " + name + "\n\n")
+    print("You got", score, "out of 10 questions correct!\n\n")
+    time.sleep(2)
+    print("Thanks for playing! \n")
+    time.sleep(1)
+    endgame_image()
+    time.sleep(1)
+    print("Press R to replay the quiz\n")
+    print("Press Q to quit the quiz and return to start menu")
+    print("Alternatively, click the RUN PROGRAM button to Quit the quiz\n")
+    time.sleep(2)
+    # gameover_menu()
+
+
 def quiz_instructions():
     """
     Function to display quiz instructions to the user.
@@ -114,6 +166,30 @@ def quiz_instructions():
     print("It's now time to start the quiz!\n\n")
 
 
+def nav_menu():
+    """
+    Function that gives users ability to navigate around the quiz.
+    Restart or Quit function.
+    """
+    press_key = input().lower()
+    if press_key == "p":
+        time.sleep(2)
+        print("Nice to see you back and ready to play!\n")
+        time.sleep(2)
+        display_quiz(questions)
+
+    if press_key == "q":
+        time.sleep(2)
+        print("Have a nice day! Please come back and play again some time!\n")
+        time.sleep(2)
+        start_game()
+
+    else:
+        print("Invalid choice. Please press either P or Q.\n")
+        time.sleep(1)
+        nav_menu()
+
+
 def display_menu():
     """
     This is a function to display a menu to start the quiz.
@@ -124,14 +200,14 @@ def display_menu():
     menu = (input("A: Start Quiz    B: Instructions\n").lower())
     if menu == "a":
         time.sleep(1)
-        # display_quiz(questions)
+        display_quiz(questions)
     if menu == "b":
         print("Please check out the Quiz instructions")
         time.sleep(3)
         quiz_instructions()
         print("Press P to proceed to the Quiz\n")
         print("Press Q to quit")
-        # nav_menu()
+        nav_menu()
     if menu not in ['a', 'b']:
         print('Invalid choice! Please choose A or B to proceed\n\n')
         return display_menu()
