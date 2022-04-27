@@ -163,6 +163,7 @@ def quiz_instructions():
     print("3. It is a multiple choice quiz, so you can choose "
           "answers from A to D")
     print("4. Your score will be revealed at the end of the quiz.\n\n")
+    print("5. Capital letter entry isn't required when answering questions")
 
     time.sleep(2)
     print("It's now time to start the quiz!\n\n")
