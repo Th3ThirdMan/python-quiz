@@ -150,6 +150,16 @@ def start_image():
 start_image()
 
 
+def endgame_image():
+    """
+    This is a function that enacts ASCII text output
+    """
+    image = pyfiglet.figlet_format("This is the end of the Quiz: "
+                                   "Thanks for playing!")
+    print(image)
+    time.sleep(1.5)
+
+
 def start_game():
     """
     Function to start the Python Quiz game.
