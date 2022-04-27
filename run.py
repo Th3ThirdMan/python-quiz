@@ -141,11 +141,11 @@ def display_quiz(questions):
     print("You got", score, "out of 10 questions correct!\n\n")
     time.sleep(2)
     print("Thanks for playing! \n")
-    time.sleep(1)
+    time.sleep(3)
     endgame_image()
     time.sleep(1)
     print("Press R to replay the quiz\n")
-    print("Press Q to quit the quiz and return to start menu")
+    print("Press Q to quit the quiz and return to start menu\n\n\n\n\n")
     print()
     time.sleep(2)
     gameover_menu()
@@ -211,7 +211,7 @@ def gameover_menu():
     else:
         print("Invalid input!")
         time.sleep(1)
-        print("Press either R, Q")
+        print("Press either R or Q")
         gameover_menu()
 
 
