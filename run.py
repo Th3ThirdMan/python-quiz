@@ -120,11 +120,12 @@ def display_quiz(questions):
     This function checks if answers are correct or incorrect.
     """
     while True:
+        print("\n\nYour quiz name requires characters from A-Z only.\n")
         name = input("\nPlease enter your name below:\n\n")
         if name.isalpha():
             break
-    print("\nThe quiz requires characters from A-Z only\n")
-    print(f"\n Let us now start the Python Quiz, {name}\n\n")
+    print(f"\n\nHello {name}! Let us now start the Python Quiz.\n\n")
+    print("---------------------------------------------------")
     time.sleep(2)
     new_list = random.sample(questions, 10)
     score = 0
@@ -140,7 +141,6 @@ def display_quiz(questions):
     print("Thank you for completing the quiz, " + name + "\n\n")
     print("You got", score, "out of 10 questions correct!\n\n")
     time.sleep(2)
-    print("Thanks for playing! \n")
     time.sleep(3)
     endgame_image()
     time.sleep(1)
@@ -158,12 +158,12 @@ def quiz_instructions():
     """
     print("These are the instructions to the Python Quiz!\n\n")
     time.sleep(2)
-    print("1. The quiz contains questions relating to Python.")
-    print("2. The quiz contains 10 questions.")
+    print("1. The quiz contains questions relating to Python.\n")
+    print("2. The quiz contains 10 questions.\n")
     print("3. It is a multiple choice quiz, so you can choose "
-          "answers from A to D")
-    print("4. Your score will be revealed at the end of the quiz.\n\n")
-    print("5. Capital letter entry isn't required when answering questions")
+          "answers from A to D.\n")
+    print("4. Your score will be revealed at the end of the quiz.\n")
+    print("5. Capital letters are NOT required when answering questions.\n\n")
 
     time.sleep(2)
     print("It's now time to start the quiz!\n\n")
@@ -223,10 +223,10 @@ def display_menu():
     This is a function to display a menu to start the quiz.
     This is a function to read through the instructions.
     """
-    print("Please Enter A to start the quiz.\n")
-    print("Please Enter B to go to Instructions.\n\n")
+    print("     Please Enter A to start the quiz.\n")
+    print("     Please Enter B to go to Instructions.\n\n")
     print("---------------------------------------------------")
-    menu = (input("A: Start Quiz    B: Instructions\n").lower())
+    menu = (input("A: Start Quiz           B: Instructions\n").lower())
     if menu == "a":
         time.sleep(1)
         display_quiz(questions)
@@ -246,7 +246,7 @@ def start_image():
     This is a function that enacts an ASCII output.
     """
     result = pyfiglet.figlet_format("The Python Quiz")
-    print("\n\nHello and Welcome to.... ")
+    print("\n\n                  Hello and Welcome to.... ")
     print(result)
     time.sleep(2)
 
