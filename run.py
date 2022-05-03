@@ -145,7 +145,7 @@ def display_quiz(questions):
     endgame_image()
     time.sleep(1)
     print("Press R to replay the quiz\n")
-    print("Press Q to quit the quiz and return to start menu\n")
+    print("Press Q to quit the quiz and return to the start menu\n")
     print("---------------------------------------------------")
     print("---------------------------------------------------")
     time.sleep(2)
