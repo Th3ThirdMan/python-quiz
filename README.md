@@ -78,7 +78,7 @@ The quiz opens with a greeting, offering two options - Start the quiz or Read th
 
 <br>
 
-  * The Start Page consists of the NTWICM logo set as a background with a simple box outlining the nature of the site, how many questions are to be answered, and the means to progress on through to the quiz. 
+  * The Start Page consists of ASCII Welcome text with an option to start the quiz or open up details on instruction about the quiz. 
 
   <br>
 
@@ -106,8 +106,6 @@ The quiz opens with a greeting, offering two options - Start the quiz or Read th
 
   * The questions are multiple choice with 4 options to choose from.
 
-  * 
-
   <br>
 
   ![Quiz Page](images/quizpage.png)
@@ -115,10 +113,6 @@ The quiz opens with a greeting, offering two options - Start the quiz or Read th
   <br><br>
 
   # Testing
-
-  * The project was tested rigorously in a responsive manner, particularly for rendering on smaller and mobile devices. Devices used were: Mobile (Xiaomi Mi 10, 6"), Tablet (Samsung, 7.5" & iPad Air, 8"), Laptop (MacBook Air, 13"). 
-
-  * The site was tested on different browsers, Chrome, Safari and Firefox.
 
   <br>
 
@@ -130,19 +124,11 @@ The quiz opens with a greeting, offering two options - Start the quiz or Read th
 
   * No errors were recorded when entered into the official PEP8 Python Validator.
 
-  <br><br>
-
-  # Web Developer Tools
-
    <br>
 
   # Future Features
 
-  * Add a question counter to denote to the user how far along in the quiz they are.
-
-  * Include a feature that highlights correct or incorrect answers.
-
-  * Exclude the use of radio buttons for alternatives that allow a user to click just the answer box.
+  * Include a feature that compiles and documents a High Score for users with the use of an API as per the Love Sandwiches project.
 
   <br><br>
 
@@ -154,15 +140,13 @@ The quiz opens with a greeting, offering two options - Start the quiz or Read th
 
   * Much to my chagrin, the project's quiz page featured radio buttons which wouldn't have been an initial preference for inclusion. They work as designed, but limitations in time and JavaScript learning prevented a nicer styling method whereby a user can submit answers. It wasn't necessarily a bug but I attempted many workarounds to diminish or hide their presence as I felt that they didn't quite suit the aesthetic of the quiz that I was hoping to make.
 
-  * For the interactive parts of the project I encountered some difficulty with JavaScript, primarily with the quiz page. The scores for the quiz didn't add up correctly, but I discovered that the reason for this inaccuracy was down to syntax errors when writing up the quiz questions. Correcting the amount of commas alleviated this problem.
-
   <br><br>
 
   # Unfixed Bugs
 
   <br>
 
-  * There were no unfixed bugs.
+  * There were no unfixed bugs that were detected or proved to break the flow of the application.
 
   <br><br>
 
