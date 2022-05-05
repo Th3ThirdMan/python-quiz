@@ -10,7 +10,7 @@ The Python Quiz is a quiz designed to be representative of studies undertaken fo
 The quiz concept is a well-known one and its purpose is for people of all ages to interact with it. Familiarity and useability are key constructs for the quiz and it also serves to provide a fun experience for those who want to know if their knowledge is up to scratch in python. 
 <br><br>
 
-The quiz opens with a greeting, offering two options - a Start the Quiz or Read the Instructions option. The Instruction page gives simple instructions on how to complete the quiz and what the user will come to expect. On the Instruction page it indicates there are 10 questions available for users to attempt. It shows instructions on how to start the quiz and how many correct questions will be totted up upon conclusion of the quiz.
+The quiz opens with a greeting, offering two options - a <em>Start Quiz</em> or <em>Instructions</em> option. The Instructions page gives simple instructions on how to complete the quiz and what the user will come to expect. On the Instructions page it indicates there are 10 questions available for users to attempt. It shows instructions on how to start the quiz and how many correct questions will be totted up upon conclusion of the quiz.
 <br><br>
 
 
@@ -52,7 +52,7 @@ The quiz opens with a greeting, offering two options - a Start the Quiz or Read 
 
 <br>
 
-* For returning visitors it would be good to have a larger bank of questions for a user to test themselves.
+* For returning visitors it would be good to have a larger bank of questions for a user to test themselves. This would further promote learning of languages they are passionate about.
 
 <br>
 
@@ -80,11 +80,17 @@ The quiz opens with a greeting, offering two options - a Start the Quiz or Read 
 
 <br>
 
-  * The Start Page consists of ASCII Welcome text with an option to start the quiz or open up details on instruction about the quiz. 
+  * The Start Page consists of ASCII Welcome text with an option to start the quiz or open up details on instructions about the quiz. 
+
+  * After the Welcome text, start quiz, and instruction options the quiz prompts a user to enter their name which requires characters between A-Z only.
 
   <br><br>
 
   ![Start Page](images/deployment.png) 
+
+  <br>
+
+  ![Start Page](images/namecharac.png)
 
   <br><br>
 
@@ -134,7 +140,7 @@ The quiz opens with a greeting, offering two options - a Start the Quiz or Read 
 
   <br>
 
-  * Testing the deployment was rigorous and intricate to some degree. In terms of it being a quiz, it was not only just a requirement to accept users answers and move forward to completion. As the screenshot example shows, it was a requirement to pen code to highlight invalid entries and indicate this with invalid output warnings. This is a  fundamental requirement for all users.
+  * Testing the deployment was rigorous and intricate to varying degrees. In terms of it being a quiz, it was not only just a requirement to accept users answers and move forward to completion. As the screenshot example shows, it was a requirement to pen code to highlight invalid entries and indicate this with invalid output warnings. This is a  fundamental requirement for all users.
 
   <br><br>
 
@@ -146,7 +152,7 @@ The quiz opens with a greeting, offering two options - a Start the Quiz or Read 
 
   <br><br>
 
-  * By design, code was compiled to omit a requirement for capital letters to answer questions in the quiz. I felt it complimented the general flow of a quiz typically and it negated against invalid text errors as being commonplace. This was something I felt would take away from the quiz flow and concept as a whole.
+  * By design, code was compiled to omit a requirement for capital letters to answer questions in the quiz. I felt it complimented the general flow of a quiz typically and it negated against invalid text errors being commonplace. This was something I felt would take away from the quiz flow and concept as a whole.
 
   <br><br>
 
@@ -174,9 +180,9 @@ The quiz opens with a greeting, offering two options - a Start the Quiz or Read 
 
   <br>
 
-  * I experienced bugs when attempting to deploy the project to Heroku. In the aftermath of security compromises on Heroku, login and dashboard functionality was rendered unusable. Deployment needed to be actioned via the terminal. Command line steps were adopted to deploy the project, but issues arose here. Linking to the workspace was achieved but the deployment of the project wasn't successful. The command, git push heroku main, was the last command required as per advice in deployment, but it took several attempts to get this to function. Logging out of all applications and re-entering the same command line text proved to get the project working in a satisfactory way. No further issues arose since the initial successful deployment.
+  * I experienced bugs when attempting to deploy the project to Heroku. In the aftermath of security compromises on Heroku, login and dashboard functionality was rendered unusable. Deployment needed to be actioned via the terminal. Command line steps were adopted to deploy the project, but issues arose here. Linking to the workspace was achieved but the deployment of the project wasn't successful. The command <em>git push heroku main</em>, was the last command required as per advice in deployment, but it took several attempts to get this to function. Logging out of all applications and re-entering the same command line text proved to get the project working in a satisfactory way. No further issues arose since the initial successful deployment.
 
-  * Early in post-completion of the project code I did have some issues with the Instructions Page, primarily with the options to Proceed or Quit and the subsequent "Invalid Option" when both keys P or Q were not entered as requested. The screenshot indicates the required flow expected below. The initial bug (when the requested keys weren't inputted) yielded a loop back to the Start Page again. Mistakenly the Start Page function had found it's way into that block of code and was reason for the disruption in flow and premature re-start of the quiz.
+  * Early in post-completion of the project code I did have some issues with the Instructions Page, primarily with the options to **Proceed** or **Quit** and the subsequent <em>Invalid Option</em> when both keys **P** or **Q** were not entered as requested. The screenshot indicates the required flow expected below. The initial bug (when the requested keys weren't inputted) yielded a loop back to the Start Page again. Mistakenly the Start Page function had found it's way into that block of code and was reason for the disruption in flow and a premature re-start of the quiz.
 
   <br><br>
 
